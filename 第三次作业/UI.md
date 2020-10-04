@@ -3,19 +3,31 @@
 1.TextView的添加以及字体颜色的设置
 
 ```
-<TextView    android:id="@+id/text_view"    android:layout_width="match_parent"    android:layout_height="wrap_content"    android:gravity="center"    android:textSize="24sp"    android:textColor="#FFE4E1"    android:text="彭欢怡专用" />
+<TextView  
+android:id="@+id/text_view" 
+android:layout_width="match_parent"   
+android:layout_height="wrap_content"  
+android:gravity="center"   
+android:textSize="24sp"  
+android:textColor="#FFE4E1"  
+android:text="彭欢怡专用" />
 ```
 
 实验结果
 
-![]( [https://github.com/HelloFool/2018118132_Android/blob/master/%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/photo/TextView.png](https://github.com/HelloFool/2018118132_Android/blob/master/第三次作业/photo/TextView.png) )
+![](https://github.com/HelloFool/2018118132_Android/blob/master/第三次作业/photo/TextView.png)
 
 2.添加按钮
 
 布局文件主要代码
 
 ```
-<Button    android:id = "@+id/button_1"    android:layout_width="match_parent"    android:layout_height="wrap_content"    android:text="点我点我"    android:background="@color/colorPrimary"    />
+<Button  
+android:id = "@+id/button_1"   
+android:layout_width="match_parent"  
+android:layout_height="wrap_content" 
+android:text="点我点我"   
+android:background="@color/colorPrimary"    />
 ```
 
 实验结果
@@ -27,7 +39,10 @@
 布局文件主要代码
 
 ```
-<EditText    android:id="@+id/edit_text"    android:layout_width="match_parent"   android:hint="http://www.baidu.com"   
+<EditText   
+android:id="@+id/edit_text"  
+android:layout_width="match_parent"
+android:hint="http://www.baidu.com"   
 android:layout_height="wrap_content"/>
 ```
 
@@ -40,7 +55,11 @@ android:layout_height="wrap_content"/>
 布局文件的主要代码
 
 ```
-<ImageView    android:id="@+id/image_view"    android:layout_width="wrap_content"    android:layout_height="wrap_content"    android:src="@drawable/a"    />
+<ImageView  
+android:id="@+id/image_view" 
+android:layout_width="wrap_content"  
+android:layout_height="wrap_content"  
+android:src="@drawable/a"    />
 ```
 
 实验结果
