@@ -55,6 +55,10 @@ public void save(String inputText) throws IOException {
     }
 **实验结果与分析**
 
+![](https://github.com/HelloFool/2018118132_Android/blob/master/广播/photo/c364963e84b55cb72acfd18f0bf240c.png) )
+
+ ![https://github.com/HelloFool/2018118132_Android/blob/master/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/result/result.png](https://github.com/HelloFool/2018118132_Android/blob/master/第五次作业/result/result.png) 
+
 运行程序时需要输入登录账户和密码，这里对账号实现数据文件持久化操作，第一次输入账号后，退出程序重新打开，可以看到
 
 用户的账户被保存，下一次只输入密码即可
