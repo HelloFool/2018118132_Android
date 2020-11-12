@@ -6,7 +6,9 @@
 **安卓系统提供了3种方式用于简单的实现数据的持久化功能，有文件存储，SharedPreferences存储，以及数据库存储**
 
 **（1）文件存储**
+
 实验主要代码
+
 public void save(String inputText) throws IOException {
         FileOutputStream out=null;
         BufferedWriter writer=null;
@@ -27,6 +29,7 @@ public void save(String inputText) throws IOException {
 
         }
     }
+    
     public String load(){
         FileInputStream in=null;
         BufferedReader reader=null;
