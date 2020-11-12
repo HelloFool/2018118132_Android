@@ -9,26 +9,30 @@
 
 实验主要代码
 
-public void save(String inputText) throws IOException {
-        FileOutputStream out=null;
-        BufferedWriter writer=null;
-        try {
-            out=openFileOutput("accountData",Context.MODE_APPEND);
-            writer=new BufferedWriter(new OutputStreamWriter((out)));
-            writer.write(inputText);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                if(writer!=null){
-                    writer.close();
-                }
-            }catch (IOException e){
-                e.printStackTrace();
-            }
 
-        }
+
+    public void save(String inputText) throws IOException {
+            FileOutputStream out=null;
+            BufferedWriter writer=null;
+            try {
+                out=openFileOutput("accountData",Context.MODE_APPEND);
+                writer=new BufferedWriter(new OutputStreamWriter((out)));
+                writer.write(inputText);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }finally {
+                try {
+                    if(writer!=null){
+                        writer.close();
+                    }
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
     }
+
+}
+
+    
     
     public String load(){
         FileInputStream in=null;
