@@ -32,8 +32,8 @@
 
 }
 
-    
-    
+
+​    
     public String load(){
         FileInputStream in=null;
         BufferedReader reader=null;
@@ -69,3 +69,26 @@
 运行程序时需要输入登录账户和密码，这里对账号实现数据文件持久化操作，第一次输入账号后，退出程序重新打开，可以看到
 
 用户的账户被保存，下一次只输入密码即可
+
+**(2)SharedPreferences存储**
+
+通过)SharedPreferences对象和editor对象实现对数据的存储操作，这里通过记住用户密码来实现
+
+主要代码
+
+读：
+
+    boolean isRemember = pref.getBoolean("remember_password", false);
+        if (isRemember) {
+            String account = pref.getString("account", "");
+            String password = pref.getString("password", "");
+            accountEdit.setText(account);
+            passwordEdit.setText(password);
+            rememberPass.setChecked(true);
+        }
+
+写：
+                        editor.putBoolean("remember_password", true);
+                        editor.putString("account", account);
+                        editor.putString("password", password);
+**运行结果**
