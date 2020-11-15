@@ -26,6 +26,8 @@
 
 **第二次实验（活动的生命周期及几个回调函数的使用）**
 
+ [https://github.com/HelloFool/2018118132_Android/tree/master/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A](https://github.com/HelloFool/2018118132_Android/tree/master/第一次作业) 
+
 **第一次实验（工具链安装和HELLOWORLD程序）**
 
  https://github.com/HelloFool/2018118132_Android/tree/master/android_Managment/hello_world 
