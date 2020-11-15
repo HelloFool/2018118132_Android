@@ -12,7 +12,7 @@
 
 *本次实验通过活动一和活动二的切换对本内容进一步的了解：*
 
- [https://github.com/HelloFool/2018118132_Android/tree/master/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/ActivityLifeTest](https://github.com/HelloFool/2018118132_Android/tree/master/第一次作业/ActivityLifeTest) 
+ [https://github.com/HelloFool/2018118132_Android/tree/master/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/Activity_lifeTest](https://github.com/HelloFool/2018118132_Android/tree/master/第一次作业/Activity_lifeTest) 
 
 **实验结果**
 
