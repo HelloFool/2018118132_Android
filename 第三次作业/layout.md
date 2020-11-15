@@ -1,4 +1,4 @@
-​                                              **第三次实验**
+                                              **第三次实验**
 
 This my job is realize of the layout
 
@@ -58,11 +58,20 @@ android:layout_centerInParent="true"
 **here is main code**
 
 ```
-<Button    android:id="@+id/button_21"    android:layout_width="wrap_content"    android:layout_height="wrap_content"    android:layout_gravity="left"    android:text="Button 3"    />
+<Button    android:id="@+id/button_21"    
+android:layout_width="wrap_content"   
+android:layout_height="wrap_content"    
+android:layout_gravity="left"    
+android:text="Button 3"    />
 ```
 
 ```
-<ImageView    android:layout_width="wrap_content"    android:layout_height="wrap_content"    android:layout_gravity="center"    android:src="@mipmap/ic_launcher"        />
+<ImageView   
+android:layout_width="wrap_content"  
+android:layout_height="wrap_content"  
+android:layout_gravity="center"  
+android:src="@mipmap/ic_launcher"    
+/>
 ```
 
 **output**
@@ -74,7 +83,16 @@ android:layout_centerInParent="true"
 **here is main code**
 
 ```
-<androidx.percentlayout.widget.PercentFrameLayout    xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"    android:layout_width="match_parent"    android:layout_height="match_parent">    <Button        android:id="@+id/button1"        android:text="Button 1"        android:layout_gravity="left|top"        app:layout_widthPercent="50%"        app:layout_heightPercent="50%"        />
+<androidx.percentlayout.widget.PercentFrameLayout   
+xmlns:android="http://schemas.android.com/apk/res/android"   
+xmlns:app="http://schemas.android.com/apk/res-auto"    
+android:layout_width="match_parent"   
+android:layout_height="match_parent">   
+<Button        android:id="@+id/button1"     
+android:text="Button 1"       
+android:layout_gravity="left|top"     
+app:layout_widthPercent="50%"       
+app:layout_heightPercent="50%"        />
 ```
 
 **output**
