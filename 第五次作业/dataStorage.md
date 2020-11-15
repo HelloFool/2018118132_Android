@@ -91,7 +91,12 @@
                         editor.putBoolean("remember_password", true);
                         editor.putString("account", account);
                         editor.putString("password", password);
+
+
+
 **运行结果**
+
+
 
 **(3)数据库存储**
 
@@ -111,28 +116,27 @@
 
 主要代码
 
-//增
 
-LitePal.getDatabase();
-  Button button=(Button)findViewById(R.id.send);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LitePal.getDatabase();
-                Fruit fruit=new Fruit();
-                fruit.setImageId(R.drawable.orange_pic);
-                fruit.setName("I am cat");
-                fruit.save();
-                Intent intent=new Intent("com.example.recycleview.MY_BROADCAST");
-                sendBroadcast(intent);
-            }
-        });
 
-//改
-
-​       
-
-          Button button2=(Button)findViewById(R.id.update);
+         //增
+    
+    LitePal.getDatabase();
+      Button button=(Button)findViewById(R.id.send);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    LitePal.getDatabase();
+                    Fruit fruit=new Fruit();
+                    fruit.setImageId(R.drawable.orange_pic);
+                    fruit.setName("I am cat");
+                    fruit.save();
+                    Intent intent=new Intent("com.example.recycleview.MY_BROADCAST");
+                    sendBroadcast(intent);
+                }
+            });
+    
+    //改
+         Button button2=(Button)findViewById(R.id.update);
             button2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -162,7 +166,7 @@ LitePal.getDatabase();
         });
 **实验结果**
 
-
+![](https://github.com/HelloFool/2018118132_Android/blob/master/第五次作业/result/dataBase.png) 
 
 
 
@@ -175,4 +179,3 @@ LitePal.getDatabase();
 **据类型，收获良多，但仅仅掌握书本上的数据存储操作是远远不够的，持久化技术更为精细的用法要在未来项目实际需求来继续**
 
 **探索和学习。**
-
