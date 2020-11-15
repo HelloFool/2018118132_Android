@@ -96,7 +96,7 @@
 
 **运行结果**
 
-
+![] (https://github.com/HelloFool/2018118132_Android/blob/master/第五次作业/result/Shared.png) 
 
 **(3)数据库存储**
 
