@@ -34,32 +34,32 @@
 
 
 ​    
-    public String load(){
-        FileInputStream in=null;
-        BufferedReader reader=null;
-        StringBuilder context=new StringBuilder();
-        try {
-            in=openFileInput("accountData");
-            reader =new BufferedReader(new InputStreamReader(in));
-            String line="";
-            while((line=reader.readLine())!=null){
-                context.append(line);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            if(reader!=null){
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return context.toString();
-    }
+​    public String load(){
+​        FileInputStream in=null;
+​        BufferedReader reader=null;
+​        StringBuilder context=new StringBuilder();
+​        try {
+​            in=openFileInput("accountData");
+​            reader =new BufferedReader(new InputStreamReader(in));
+​            String line="";
+​            while((line=reader.readLine())!=null){
+​                context.append(line);
+​            }
+​        } catch (FileNotFoundException e) {
+​            e.printStackTrace();
+​        } catch (IOException e) {
+​            e.printStackTrace();
+​        }finally {
+​            if(reader!=null){
+​                try {
+​                    reader.close();
+​                } catch (IOException e) {
+​                    e.printStackTrace();
+​                }
+​            }
+​        }
+​        return context.toString();
+​    }
 **实验结果与分析**
 
 ![](https://github.com/HelloFool/2018118132_Android/blob/master/广播/photo/c364963e84b55cb72acfd18f0bf240c.png) )
@@ -92,3 +92,73 @@
                         editor.putString("account", account);
                         editor.putString("password", password);
 **运行结果**
+
+**(3)数据库存储**
+
+数据库存储现在流行的方式有SQLite数据库存储和LitePal数据库存储
+
+*SQLite数据库存储*
+
+这是一个轻量级的关系型数据库，运算快，占用资源少，遵守数据库的ACID事务，它的增删查改通过Helper帮助类实现
+
+*LitePal数据库存储*
+
+其中LitePal数据库存储是基于对象的关系映射存储的，对SQLite数据库存储进行封装，将程序员从繁杂的SQL语句中解脱出来，精心开发代码实现，代码更加简洁
+
+***LitePal数据库存储*实验**
+
+定义按钮实现数据的增删查改
+
+主要代码
+
+//增
+
+LitePal.getDatabase();
+  Button button=(Button)findViewById(R.id.send);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LitePal.getDatabase();
+                Fruit fruit=new Fruit();
+                fruit.setImageId(R.drawable.orange_pic);
+                fruit.setName("I am cat");
+                fruit.save();
+                Intent intent=new Intent("com.example.recycleview.MY_BROADCAST");
+                sendBroadcast(intent);
+            }
+        });
+
+//改
+
+​       
+
+          Button button2=(Button)findViewById(R.id.update);
+            button2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fruit fruit=new Fruit();
+                    fruit.setImageId(R.drawable.pear_pic);
+                    fruit.updateAll("name=?","I am cat");   }
+        });
+        //删
+        Button button3=(Button)findViewById(R.id.delete);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LitePal.deleteAll(Fruit.class,"id>?","9");
+            }
+        });//查
+        Button button4=(Button)findViewById(R.id.query);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                List<Fruit>fruits= LitePal.findAll(Fruit.class);
+                for(Fruit f:fruits){
+                    System.out.println("****My id is "+f.getId());
+                    System.out.println("My words are "+f.getName()+"**");
+                    System.out.println(f.getImageId());
+                }
+            }
+        });
+**实验结果**
+
