@@ -29,37 +29,39 @@
                     e.printStackTrace();
                 }
     }
+    }
+    
+    
+    ​    
+    ​    public String load(){
+    ​        FileInputStream in=null;
+    ​        BufferedReader reader=null;
+    ​        StringBuilder context=new StringBuilder();
+    ​        try {
+    ​            in=openFileInput("accountData");
+    ​            reader =new BufferedReader(new InputStreamReader(in));
+    ​            String line="";
+    ​            while((line=reader.readLine())!=null){
+    ​                context.append(line);
+    ​            }
+    ​        } catch (FileNotFoundException e) {
+    ​            e.printStackTrace();
+    ​        } catch (IOException e) {
+    ​            e.printStackTrace();
+    ​        }finally {
+    ​            if(reader!=null){
+    ​                try {
+    ​                    reader.close();
+    ​                } catch (IOException e) {
+    ​                    e.printStackTrace();
+    ​                }
+    ​            }
+    ​        }
+    ​        return context.toString();
+    ​    }
 
-}
 
 
-​    
-​    public String load(){
-​        FileInputStream in=null;
-​        BufferedReader reader=null;
-​        StringBuilder context=new StringBuilder();
-​        try {
-​            in=openFileInput("accountData");
-​            reader =new BufferedReader(new InputStreamReader(in));
-​            String line="";
-​            while((line=reader.readLine())!=null){
-​                context.append(line);
-​            }
-​        } catch (FileNotFoundException e) {
-​            e.printStackTrace();
-​        } catch (IOException e) {
-​            e.printStackTrace();
-​        }finally {
-​            if(reader!=null){
-​                try {
-​                    reader.close();
-​                } catch (IOException e) {
-​                    e.printStackTrace();
-​                }
-​            }
-​        }
-​        return context.toString();
-​    }
 **实验结果与分析**
 
 ![](https://github.com/HelloFool/2018118132_Android/blob/master/广播/photo/c364963e84b55cb72acfd18f0bf240c.png) )
