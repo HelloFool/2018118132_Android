@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add_item"
+        android:title="更改图片"/>
+    <item
+        android:id="@+id/remove_item"
+        android:title="播放音乐"/>
+</menu>
