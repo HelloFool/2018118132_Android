@@ -35,6 +35,10 @@ private Handler handler=new Handler(){
 
 **实验结果**
 
+ ![]( https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/6b760bb36e34166a7e4ccfc6eb12d71.png  )
+
+![]( https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/de11a48a30611897a429050d8ee0ca8.png )
+
 ##### 2.服务的启动和停止
 
 在定义服务后，借助Intent可以实现服务的启动和停止，启动有onCreate方法和onStartCommand方法，停止为onDestory方法，主要代码如下：
@@ -58,7 +62,11 @@ private Handler handler=new Handler(){
 
 **实验结果**
 
+![](https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/0904ef312dab2dfa557747810134b31.png )
 
+![]( https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/5ec9072d8cc4ad484600dee228bfe07.png )
+
+![]( https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/8477e490292e820f2cd0e057ea16ee5.png )
 
 ##### 3.子服务绑定
 
