@@ -70,7 +70,63 @@ private Handler handler=new Handler(){
 
 ##### 3.子服务绑定
 
+服务启动后，若想通过活动来控制服务的任务，需要在活动建立与服务的绑定关系，实现这个绑定关系可以创建一个专门的Binder对象来实现，这里通过按钮进行服务绑定和解除绑定
+
+```java
+public class MyService extends Service {
+
+    public MyService() {
+    }
+
+    private DownloadBinder mBinder = new DownloadBinder();
+
+    class DownloadBinder extends Binder {
+
+        public void startDownload() {
+
+            Log.e("MyService", "startDownload executed");
+        }
+
+        public int getProgress() {
+            Log.e("MyService", "getProgress executed");
+            return 0;
+        }
+
+    }
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        return mBinder;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Log.e("MyService", "onCreate executed");
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.d("MyService", "onStartCommand executed");
+        return super.onStartCommand(intent, flags, startId);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.e("MyService", "onDestroy executed");
+    }
+
+}
+
+```
+
+**实验结果**
+
 
 
 ##### 4.多线程
 
+由于在主线程直接处理耗时逻辑，很可能导致主线程被阻塞，所以要采用多线程的编程技术
+
+这里分别打印了主线程和子线程的id
