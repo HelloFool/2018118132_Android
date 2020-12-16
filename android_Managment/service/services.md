@@ -68,6 +68,8 @@ private Handler handler=new Handler(){
 
 ![]( https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/8477e490292e820f2cd0e057ea16ee5.png )
 
+![]( https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/6010aaf216c3fd3a254b525439b4749.png )
+
 ##### 3.子服务绑定
 
 服务启动后，若想通过活动来控制服务的任务，需要在活动建立与服务的绑定关系，实现这个绑定关系可以创建一个专门的Binder对象来实现，这里通过按钮进行服务绑定和解除绑定
@@ -123,10 +125,16 @@ public class MyService extends Service {
 
 **实验结果**
 
+![]( https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/ec66c9260d0f0e1c7e44ed987db199e.png )
 
+ ![](https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/e3f0248301866cb19fb74a2b78ec022.png )
 
 ##### 4.多线程
 
 由于在主线程直接处理耗时逻辑，很可能导致主线程被阻塞，所以要采用多线程的编程技术
 
 这里分别打印了主线程和子线程的id
+
+**实验结果**
+
+![]( https://github.com/HelloFool/2018118132_Android/blob/master/android_Managment/service/photo/b6706b70ad88c16cb8388baba13be7d.png )
