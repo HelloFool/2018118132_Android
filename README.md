@@ -1,5 +1,9 @@
 # 我本次工作的有
 
+**第十次次实验（服务）**
+
+ https://github.com/HelloFool/2018118132_Android/tree/master/android_Managment/service 
+
 **第九次实验（界面UI）**
 
  https://github.com/HelloFool/2018118132_Android/tree/master/android_Managment/mission_and_photo 
