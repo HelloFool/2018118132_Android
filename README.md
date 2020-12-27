@@ -2,7 +2,7 @@
 
 **课程设计（学生选课管理系统）**
 
-
+ https://github.com/HelloFool/2018118132_Android/tree/master/android_Managment/finalwork 
 
 **第十次次实验（服务）**
 
